@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.youareright.dao.MenuDao">
+    <resultMap id="goodsMap" type="com.youareright.model.sys.GoodsEntity">
+
+    </resultMap>
+    <!-- 获取未打标图像 -->
+    <select id="unsignedGoods" resultMap="goodsMap">
+    </select>
+
+</mapper>

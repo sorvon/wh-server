@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wanghuan.dao.RoleDao">
-	<resultMap id="roleMap" type="com.wanghuan.model.sys.RoleEntity">
+<mapper namespace="com.youareright.dao.RoleDao">
+	<resultMap id="roleMap" type="com.youareright.model.sys.RoleEntity">
 		<id column="id" property="id" />
 		<result column="role" property="role" />
 		<result column="name" property="name" />
@@ -10,7 +10,7 @@
 	</resultMap>
 	<!-- 获取role列表 -->
 	<select id="rolesList" resultMap="roleMap">
-	<![CDATA[select * from sys_role]]>
+	<![CDATA[select * from sys_role ]]>
 	    <![CDATA[ order by id ]]>
 		<if test="pageSize != null and start != null ">
 			limit #{start},#{pageSize}
@@ -18,7 +18,7 @@
 	</select>
 	<!-- 获取role列表的总量 -->
 	<select id="rolesSize" resultType="Integer">  
-	    <![CDATA[select count(*) from sys_role]]>
+	    <![CDATA[select count(*) from sys_role ]]>
 	</select>
 	<!-- 新建角色信息 -->
 	<insert id="insertRole">
